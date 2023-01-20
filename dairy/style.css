@@ -1,0 +1,321 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    
+}
+
+.imag{
+   background-image: url("images/dairi.jpg");
+   background-repeat: no-repeat;
+   background-size: cover;
+   height: 100vh;
+   width: 100%;
+}
+
+.imag1{
+
+   background-image: url("images/milk.jpg");
+   background-repeat: no-repeat;
+   background-size: cover;
+   height: 100vh;
+   width: 100%;
+
+}
+
+.ice{
+
+   background-image: url("images/Service-Banner.jpg");
+   background-repeat: no-repeat;
+   background-size: cover;
+   height: 50vh;
+   width: 100%;
+
+
+}
+
+.navbar{
+   display: flex;
+   align-items: center;
+   justify-content: space-around;
+   
+}
+
+#header {
+   list-style: none;
+   font-size: 20px;
+   display: flex;
+   
+   
+}
+
+#header li a{
+   text-decoration: none;
+   transition: 0.3ease;
+   padding: 20px 30px;
+}
+
+#header li a:hover{
+   color:#088178;
+}
+ 
+
+
+
+ .sym{
+
+   padding: 20px 30px;
+   margin: 20px;
+ }
+
+ .sym h4{
+   padding: 10px;
+ }
+
+ .prod ul{
+    text-align: center;
+    display: inline-flex;
+    font-size: 20px;
+    
+ 
+ }
+
+ .prod ul li{
+    list-style: none;
+    width: 120px;
+    margin: 10px;
+    padding: 15px;
+ }
+
+ .prod ul li a{
+    text-decoration: none;
+    color:black;
+    padding: 3px 3px;
+ }
+
+ .section{
+    display: flex;
+    padding:30px;
+    margin: 20px;
+    justify-content: space-around;
+ }
+
+ .about{
+    width: 500px;
+ }
+
+ .about h1{
+   
+    font-size: 20px;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+ }
+
+ .about p{
+   margin-bottom: 20px;
+ }
+ .thou{
+    width: 400px;
+    border: 1px solid black;
+    text-align: center;
+    padding: 30px;
+    margin: 20px;
+ }
+
+ .thou:hover{
+    color:blue;
+    transition: 0.3ease;
+    width:500px;
+ }
+
+
+
+ button {
+    background-color: gray;
+    color:white;
+   font-size: 15px;
+    outline: none;
+    border: none;
+    padding: 10px 20px;
+ }
+
+ button a{
+   text-decoration: none;
+   color: white;
+ }
+
+ 
+
+ .main-ima{
+    
+        position: relative;
+        background-image: url("images/prodlist.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-color: white;
+        height: 500px;
+        overflow: hidden;
+        
+        
+    
+ }
+
+ .sec1{
+    text-align: center;
+    padding: 30px;
+    margin: 20px;
+    
+ }
+
+ .sec1 h1{
+    padding: 20px;
+ }
+
+ .productlist{
+    display:inline-block;
+    align-items: center;
+    
+ }
+
+ .list  .pro-container{
+    display: flex;
+    justify-content: space-between;
+    padding-top:20px;
+    flex-wrap: wrap;
+}
+
+ .pro{
+    width:23%;
+    min-width: 250px;
+    padding: 10px 12px;
+    border: 1px solid #cce7d0;
+    border-radius: 25px;
+   cursor: pointer;
+   box-shadow: 20px 20px 30px rgba(0,0,0,0.02);
+   margin: 15px 0;
+   transition: 0.2s ease;
+}
+
+.pro:hover{
+    box-shadow: 20px 20px 30px rgba(0,0,0,0.06);
+}
+
+.pro img{
+    width: 100%;
+    border-radius: 20px;
+}
+
+.pro .desc{
+    text-align: start;
+    padding: 10px 0;
+}
+
+.pro .desc span{
+    color:black;
+    font-size: 12px;
+}
+
+.pro .price{
+    padding-top: 7px;
+    font-size: 15px;
+    font-weight: 700;
+    color:#088178;
+    
+    
+}
+
+.overview h1,h5,p{
+   padding: 20px;
+   text-align: center;
+   width: 100%;
+}
+
+.sect{
+   background: url("images/greenary.jpg");
+   background-repeat: no-repeat;
+   background-size: cover;
+}
+
+.sect{
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-between;
+   padding: 20px 30px;
+   margin: 20px;
+ 
+   
+}
+
+.sect .link{
+   display: flex;
+   flex-direction: column;
+  align-items: flex-start;
+   margin-bottom: 20px ;
+
+}
+
+.account {
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start;
+   margin-bottom: 20px;
+}
+
+.link a,
+.account a{
+   color:black;
+   text-decoration: none;
+}
+
+.link a:hover{
+   color:#088178;
+}
+.account a:hover{
+   color:#088178;
+}
+
+.gold{
+   background-image: url("images/goldmilk.jpg");
+   background-repeat: no-repeat;
+   background-size: cover;
+   
+}
+
+.gol {
+   align-items: center;
+   
+   
+}
+
+.gol button{
+   padding: 20px;
+}
+
+.gold p{
+   width: 50%;
+   
+}
+
+.container{
+   display: flex;
+   justify-content: space-between;
+   padding-top:20px;
+   flex-wrap: wrap;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.pro .star i{
+    font-size: 12px;
+    color:rgb(243,181,25);
+}
