@@ -1,21 +1,10 @@
 import React from "react";
-const FaStar=({
-    color
-})=>{
-    return(
-        <svg
-        baseProfile={tiny}
-        height="24px"
-        id="Layer_1"
-        version="1.2"
-        viewBox="0 0 24 24"
-        width="24px"
-        fill={color|| "white"}
-        >
 
+const StarIcon=({stars,reviews})=>{
+    console.log("~file: StarIcon.js ~ line 4 ~ Star ~star",stars);
 
-            </svg>
-
-        
-    )
+    return <div>StarIcon</div>
 }
+
+
+export default StarIcon;
