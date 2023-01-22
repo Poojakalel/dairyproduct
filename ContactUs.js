@@ -117,18 +117,18 @@ function ContactUs(){
 
       <div className="lin">
           <h4>About Us</h4>
-          <NavLink to="#corporate">Corporate</NavLink>
-          <NavLink to="#allproduct">All product</NavLink>
-          <NavLink to="#plants">Plants</NavLink>
-          <NavLink to="#investor">Investor</NavLink>
+          <NavLink className="imp" to="#corporate">Corporate</NavLink>
+          <NavLink className="imp" to="#allproduct">All product</NavLink>
+          <NavLink className="imp" to="#plants">Plants</NavLink>
+          <NavLink className="imp" to="#investor">Investor</NavLink>
       </div>
 
       <div className="account">
           <h4>My account</h4>
-          <NavLink to="/myaccount">MyAccount</NavLink>
-          <NavLink to="#viewcart">View Cart</NavLink>
-          <NavLink to="#myiwshlist">My Wishlist</NavLink>
-          <NavLink to="#Track My order">Track My Order</NavLink>
+          <NavLink className="imp" to="/myaccount">MyAccount</NavLink>
+          <NavLink className="imp" to="#viewcart">View Cart</NavLink>
+          <NavLink className="imp" to="#myiwshlist">My Wishlist</NavLink>
+          <NavLink className="imp" to="#Track My order">Track My Order</NavLink>
       </div>
 
       <div className="icon">

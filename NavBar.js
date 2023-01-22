@@ -67,10 +67,10 @@ function NavBar(){
 
                     <div className="lin">
                         <h4>About Us</h4>
-                        <NavLink to='/contactus'>ContactUs</NavLink>
-                        <NavLink to='#corporate'>Corporate</NavLink>
-                        <NavLink to='#corporate'>Corporate</NavLink>
-                        <NavLink to='#corporate'>Corporate</NavLink>
+                        <NavLink className="imp" to='/contactus'>ContactUs</NavLink>
+                        <NavLink className="imp" to='/ourparlour'>Our Parlour</NavLink>
+                        <NavLink className="imp" to='/events'>events</NavLink>
+                        <NavLink className="imp" to='/awards'>Awards</NavLink>
 
 
 
@@ -78,10 +78,10 @@ function NavBar(){
 
                     <div className="account">
                         <h4>My account</h4>
-                        <NavLink to ="/myaccount">MyAccount</NavLink>
-                        <NavLink to="/termscondition">Terms Condition</NavLink>
-                        <NavLink to="/services">Services</NavLink>
-                        <NavLink to="/feedback">Feedback</NavLink>
+                        <NavLink className="imp" to ="/myaccount">MyAccount</NavLink>
+                        <NavLink className="imp" to="/termscondition">Terms Condition</NavLink>
+                        <NavLink className="imp" to="/services">Services</NavLink>
+                        <NavLink className="imp" to="/feedback">Feedback</NavLink>
                     </div>
  
                     <div className="icon">

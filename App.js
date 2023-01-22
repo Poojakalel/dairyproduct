@@ -14,6 +14,9 @@ import MyAccount from './MyAccount';
 import TermsCondition from "./TermsCondition";
 import Services from "./Services";
 import Feedback from "./Feedback";
+import OurParlour from "./OurParlour";
+import Events from "./Events";
+import Awards from "./Awards";
 
 const App=()=>{
   return(
@@ -42,6 +45,9 @@ const App=()=>{
     <Route path="/termscondition" element={<TermsCondition/>}/>
     <Route path="/services" element={<Services/>}/>
     <Route path="/feedback" element={<Feedback/>}/>
+    <Route path="/ourparlour" element={<OurParlour/>}/>
+    <Route path="/events" element={<Events/>}/>
+    <Route path="/awards" element={<Awards/>}/>
    </Routes>
  
     </BrowserRouter>

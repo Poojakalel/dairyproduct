@@ -93,10 +93,10 @@ Today 70 % of the total expenditure is spent on the animal feed. Apart from the 
 
       <div className="lin">
           <h4>About Us</h4>
-          <NavLink to='/contactus'>ContactUs</NavLink>
-          <NavLink to='#corporate'>Corporate</NavLink>
-          <NavLink to='#corporate'>Corporate</NavLink>
-          <NavLink to='#corporate'>Corporate</NavLink>
+          <NavLink className="imp" to='/contactus'>ContactUs</NavLink>
+          <NavLink className="imp" to='#corporate'>Corporate</NavLink>
+          <NavLink className="imp" to='#corporate'>Corporate</NavLink>
+          <NavLink className="imp" to='#corporate'>Corporate</NavLink>
 
 
 
@@ -104,10 +104,10 @@ Today 70 % of the total expenditure is spent on the animal feed. Apart from the 
 
       <div className="account">
           <h4>My account</h4>
-          <NavLink to ="/myaccount">MyAccount</NavLink>
-          <NavLink to="/termscondition">Terms Condition</NavLink>
-          <NavLink to="#myiwshlist">My Wishlist</NavLink>
-          <NavLink to="#Track My order">Track My Order</NavLink>
+          <NavLink className="imp" to ="/myaccount">MyAccount</NavLink>
+          <NavLink className="imp" to="/termscondition">Terms Condition</NavLink>
+          <NavLink className="imp" to="#myiwshlist">My Wishlist</NavLink>
+          <NavLink className="imp" to="#Track My order">Track My Order</NavLink>
       </div>
 
       <div className="icon">
