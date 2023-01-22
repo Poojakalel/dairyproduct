@@ -42,7 +42,7 @@ function NavBar(){
 
                     <p>Dodla Dairy Limited is a public limited company having its registered and corporate office at Hyderabad City of Telangana State in India. The company was incorporated in the year 1995 and production commenced in 1998. Currently, Our procurement is centered in 5 states and our products are available for purchase in 11 states. We have 110 milk chilling centers. Some of our plants are ISO 22000:2005 Certified while two are ISO 50001:2011 (EnMS) Certified.</p>
 
-                    <button>Read More</button>
+                    <button className="button-select">Read More</button>
                 </div>
 
                 <div className="my-ho">
@@ -67,10 +67,10 @@ function NavBar(){
 
                     <div className="lin">
                         <h4>About Us</h4>
-                        <NavLink to='corporate'>Corporate</NavLink>
-                        <NavLink to='corporate'>Corporate</NavLink>
-                        <NavLink to='corporate'>Corporate</NavLink>
-                        <NavLink to='corporate'>Corporate</NavLink>
+                        <NavLink to='/contactus'>ContactUs</NavLink>
+                        <NavLink to='#corporate'>Corporate</NavLink>
+                        <NavLink to='#corporate'>Corporate</NavLink>
+                        <NavLink to='#corporate'>Corporate</NavLink>
 
 
 
@@ -78,10 +78,10 @@ function NavBar(){
 
                     <div className="account">
                         <h4>My account</h4>
-                        <NavLink to ="#signin">Sign In</NavLink>
-                        <NavLink to="#viewcart">View Cart</NavLink>
-                        <NavLink to="#myiwshlist">My Wishlist</NavLink>
-                        <NavLink to="#Track My order">Track My Order</NavLink>
+                        <NavLink to ="/myaccount">MyAccount</NavLink>
+                        <NavLink to="/termscondition">Terms Condition</NavLink>
+                        <NavLink to="/services">Services</NavLink>
+                        <NavLink to="/feedback">Feedback</NavLink>
                     </div>
  
                     <div className="icon">

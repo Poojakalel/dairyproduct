@@ -9,6 +9,11 @@ import NavBar from "./NavBar";
 import IceCream from "./IceCream";
 import Sweets from "./Sweets";
 import Milk from './Milk';
+import ContactUs from './ContactUs';
+import MyAccount from './MyAccount';
+import TermsCondition from "./TermsCondition";
+import Services from "./Services";
+import Feedback from "./Feedback";
 
 const App=()=>{
   return(
@@ -32,6 +37,11 @@ const App=()=>{
     <Route path="/icecream" element={<IceCream/>}/>
     <Route path="/sweets" element={<Sweets/>}/>
     <Route path="/milk" element={<Milk/>}/>
+    <Route path="/contactus" element={<ContactUs/>}/>
+    <Route path="/myaccount" element={<MyAccount/>}/>
+    <Route path="/termscondition" element={<TermsCondition/>}/>
+    <Route path="/services" element={<Services/>}/>
+    <Route path="/feedback" element={<Feedback/>}/>
    </Routes>
  
     </BrowserRouter>

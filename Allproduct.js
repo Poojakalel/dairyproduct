@@ -264,7 +264,7 @@ function Allproduct(){
 
       <div className="lin">
           <h4>About Us</h4>
-          <NavLink to="#corporate">Corporate</NavLink>
+          <NavLink to="/contactus">ContactUs</NavLink>
           <NavLink to="#allproduct">All product</NavLink>
           <NavLink to="#plants">Plants</NavLink>
           <NavLink to="#investor">Investor</NavLink>
@@ -272,10 +272,10 @@ function Allproduct(){
 
       <div className="account">
           <h4>My account</h4>
-          <NavLink to="#signin">Sign In</NavLink>
-          <NavLink to="#viewcart">View Cart</NavLink>
-          <NavLink to="#myiwshlist">My Wishlist</NavLink>
-          <NavLink to="#Track My order">Track My Order</NavLink>
+          <NavLink to="/myaccount">MyAccount</NavLink>
+          <NavLink to="/termscondition">Terms Condition</NavLink>
+          <NavLink to="/services">Services</NavLink>
+          <NavLink to="/feedback">Feedback</NavLink>
       </div>
 
       <div className="icon">
