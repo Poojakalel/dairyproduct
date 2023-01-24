@@ -522,3 +522,42 @@ input[type=password]:focus{
 .add input[type=password]:focus .ca{
   color:dodgerblue;
 }
+
+.section{
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.inform{
+    padding: 20px;
+    align-items: flex-start;
+}
+
+.inform h1{
+    padding: 20px;
+}
+
+
+.inform .pri{
+    color:dodgerblue;
+    font-size: 20px;
+    font-weight: 100px;
+}
+
+.quan{
+  padding: 20px;
+}
+
+.but{
+  padding: 10px;
+  font-size: 16px;
+}
+
+.shopi{
+  font-size:16px;
+  padding: 10px 30px;
+  color:white;
+  background-color: dodgerblue;
+  border: 2px solid #3498db;
+}

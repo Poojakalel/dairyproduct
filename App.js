@@ -17,12 +17,13 @@ import Feedback from "./Feedback";
 import OurParlour from "./OurParlour";
 import Events from "./Events";
 import Awards from "./Awards";
-
+import Star from './Star';
+import BlackCurrantIcecream from "./BlackCurrantIcecream";
 const App=()=>{
   return(
     <BrowserRouter>
 
-
+  
 
    {/* <NavBar/>
    <Home/>
@@ -48,6 +49,7 @@ const App=()=>{
     <Route path="/ourparlour" element={<OurParlour/>}/>
     <Route path="/events" element={<Events/>}/>
     <Route path="/awards" element={<Awards/>}/>
+    <Route path="/blackcurranticecream" element={<BlackCurrantIcecream/>}/>
    </Routes>
  
     </BrowserRouter>

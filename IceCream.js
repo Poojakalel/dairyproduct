@@ -1,9 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import {Link, NavLink} from 'react-router-dom'
 import images from './images/logo.jpg'
-import { FaStar } from "react-icons/fa"
 import { FaShoppingCart } from "react-icons/fa";
-
+import Star from './Star';
 import images1 from './images/dairi.jpg'
 import images2 from './images/icecream.jpg'
 import images3 from './images/icecream1.jpg'
@@ -14,16 +13,46 @@ import images7 from './images/icecream5.jpg'
 import images8 from './images/icecream6.jpg'
 import images9 from './images/icecream5.jpg'
 import images10 from './images/Service-Banner.jpg'
-import {FiEye} from 'react-icons/fi'
 import {FaFacebook} from 'react-icons/fa'
 import {FaInstagram} from 'react-icons/fa'
 import {FaYoutube} from 'react-icons/fa'
 import {FaTwitter} from 'react-icons/fa'
-
+// import CartAmountToggle from "./CartAmountToggle";
+import { FaMinusCircle,FaPlusCircle } from 'react-icons/fa';
 
 
 function IceCream(){
+
+    
+    const {stars,
+     
+    reviews
+    }=IceCream;
+
+    
+    
+
+    // const[amount,setAmount]=useState(1);
+    
+    const [num,setNum]=useState(0);
+
+    const incNum=()=>{
+        setNum(num+1);
+    }
+
+    const decNum=()=>{
+
+        if(num>0){
+            setNum(num-1);
+        }
+        else{
+        setNum(0);
+        }
+    }
+    
     return(
+
+        
         <div>
             
                         
@@ -59,7 +88,8 @@ function IceCream(){
                     <div className='pro'>
                         <img src={images2} alt=""/>
                         <div className='desc'>
-                        <Link className='proname' to="/milk">Milk</Link>
+                        <Link className='proname' to="/BlackCurrantIcecream">Black Currant Icecream
+</Link>
 
                         </div>
                         <div className='block'>
@@ -68,16 +98,32 @@ function IceCream(){
                             </div>
                             <div className='star'>
 
-                              <FaStar/>
-                               <FaStar/>
-                              <FaStar/>
-                              <FaStar/>
-                              <FaStar/>
-                                
+                            <Star stars={stars} reviews={reviews}/>
+                             {/* <FaStar/>
+                             <FaStar/>
+                             <FaStar/>
+                             <FaStar/>
+                             <FaStar/> */}
+                            
                
                             </div>
+
+                           
+                           
                         </div>
 
+                        <div className="addto">
+
+                          
+
+                          <button className="but" onClick={incNum}><FaPlusCircle/></button>
+                          <button className="but">{num}</button>
+                          <button className="but" onClick={decNum}><FaMinusCircle/></button>
+                        </div>
+
+
+                        
+                       
                         <div className='inpu'>
                             <div className='add'>
                                 {/* <input type="text"  placeholder='select option' />
@@ -106,11 +152,13 @@ function IceCream(){
                                 Rs 10
                             </div>
                             <div className='star'>
+
+                            <Star stars={stars} reviews={reviews}/>
+                                {/* <FaStar/>
                                 <FaStar/>
                                 <FaStar/>
                                 <FaStar/>
-                                <FaStar/>
-                                <FaStar/>
+                                <FaStar/> */}
                             </div>
                         </div>
                     </div>
@@ -126,11 +174,15 @@ function IceCream(){
                                 Rs 10
                             </div>
                             <div className='star'>
+                                
+                            <Star stars={stars} reviews={reviews}/>
+
+                               {/*                                  
                                 <FaStar/>
                                 <FaStar/>
                                 <FaStar/>
                                 <FaStar/>
-                                <FaStar/>
+                                <FaStar/> */}
                             </div>
                         </div>
                     </div>
@@ -146,11 +198,13 @@ function IceCream(){
                                 Rs 10
                             </div>
                             <div className='star'>
+
+                            <Star stars={stars} reviews={reviews}/>
+                                {/* <FaStar/>
                                 <FaStar/>
                                 <FaStar/>
                                 <FaStar/>
-                                <FaStar/>
-                                <FaStar/>
+                                <FaStar/> */}
                             </div>
                         </div>
                     </div>
@@ -166,11 +220,12 @@ function IceCream(){
                                 Rs 10
                             </div>
                             <div className='star'>
+                            <Star stars={stars} reviews={reviews}/>
+                                {/* <FaStar/>
                                 <FaStar/>
                                 <FaStar/>
                                 <FaStar/>
-                                <FaStar/>
-                                <FaStar/>
+                                <FaStar/> */}
                             </div>
                         </div>
                     </div>
@@ -186,11 +241,12 @@ function IceCream(){
                                 Rs 10
                             </div>
                             <div className='star'>
+                            <Star stars={stars} reviews={reviews}/>
+                                {/* <FaStar/>
                                 <FaStar/>
                                 <FaStar/>
                                 <FaStar/>
-                                <FaStar/>
-                                <FaStar/>
+                                <FaStar/> */}
                             </div>
                         </div>
                     </div>
@@ -206,12 +262,18 @@ function IceCream(){
                                 Rs 10
                             </div>
                             <div className='star'>
+
+                            <Star stars={stars} reviews={reviews}/>
+                                {/* <FaStar/>
                                 <FaStar/>
                                 <FaStar/>
                                 <FaStar/>
-                                <FaStar/>
-                                <FaStar/>
+                                <FaStar/> */}
                             </div>
+
+                            {/*add to cart*/}
+
+                           
                         </div>
                     </div>
 
@@ -226,11 +288,13 @@ function IceCream(){
                                 Rs 10
                             </div>
                             <div className='star'>
+
+                            <Star stars={stars} reviews={reviews}/>
+                                {/* <FaStar/>
                                 <FaStar/>
                                 <FaStar/>
                                 <FaStar/>
-                                <FaStar/>
-                                <FaStar/>
+                                <FaStar/> */}
                             </div>
                         </div>
                     </div>

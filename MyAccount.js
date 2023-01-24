@@ -1,5 +1,6 @@
 
 
+import { useState } from 'react'
 import {FaFacebook} from 'react-icons/fa'
 import {FaInstagram} from 'react-icons/fa'
 import {FaYoutube} from 'react-icons/fa'
@@ -8,8 +9,45 @@ import {NavLink} from 'react-router-dom'
 import images from './images/logo.jpg'
 import images10 from './images/Service-Banner.jpg'
 
+
+
+
 function MyAccount(){
+
+   const[user,setUser]=useState("");
+   const[password,setPassword]=useState("");
+   const[userErr,setUserErr]=useState(false);
+   const[passErr,setPassErr]=useState(false);
+
+
+   function userHandler(e){
+    let item=e.target.value;
+    if(item.length<3)
+    {
+        setUserErr(true)
+    }
+    else{
+        setUserErr(false)
+    }
+    setUser(item)
+    console.log(e.target.value.length);
+   }
+
+   function passwordHandler(e){
+    let item=e.target.value;
+    if(item.length<3){
+        setPassErr(true)
+    }
+    else{
+        setPassErr(false);
+    }
+    setPassword(item)
+    console.log(e.target.value);
+   }
+    
     return(
+
+        
         <div>
             
             <div className='nav'>
@@ -42,10 +80,10 @@ function MyAccount(){
 
      <div className='field'>
         <label>Usrname or email: </label><br/><br/>
-        <input type="text"/>
+        <input type="text" onChange={userHandler}/>  {userErr?<span>User Not valid</span>:""}
         <br/>
         <label>Password</label><br/><br/>
-        <input type="password"/><br/><br/>
+        <input type="password" onChange={passwordHandler}/><br/><br/>  {passErr?<span>Password not valid</span>:""}
         <button className="button-select">LOGIN</button>
      </div>
 </div>
@@ -58,9 +96,9 @@ function MyAccount(){
             <label>Email address</label><br/><br/>
             <input type="email"/><br/><br/>
             <label>password</label><br/><br/>
-            <input type="password"/><br/><br/>
+            <input type="password" /><br/><br/>
             <p className='data'>Your personal data will be used to support your experience throughout this website, to manage access to your account, and for other purposes described in our <span className='privacy'>privacy policy.</span></p>
-            <button className='button-select'>REGISTER</button>
+            <button className='button-select' >REGISTER</button>
         </div>
      </div>
 

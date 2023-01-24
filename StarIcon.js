@@ -1,10 +1,24 @@
 import React from "react";
+import { FaStar, FaStarHalfAlt } from "react-icons/fa";
+import {AiOutlineStar} from "react-icons/ai";
 
-const StarIcon=({stars,reviews})=>{
-    console.log("~file: StarIcon.js ~ line 4 ~ Star ~star",stars);
+const Star=({stars,reviews})=>{
+   const ratingStar= Array.from({length:5},(elem,index)=>{
+        let numbers=index+0.5;
+    });
 
-    return <div>StarIcon</div>
+    return(
+    <span key={index}>
+        { stars>=index+1 ?(
+        <FaStar className="star"/>
+         ) : stars>= numbers
+            ?( <FaStarHalfAlt className="star"/>
+            )
+            :( <AiOutlineStar className="star"/>
+        )}
+    </span>
+    )
 }
 
 
-export default StarIcon;
+
