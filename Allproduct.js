@@ -44,6 +44,8 @@ function Allproduct(){
     <li><NavLink className="nav-bar-link" to="/allproduct">Allproduct</NavLink></li>
     <li><NavLink className="nav-bar-link" to="/icecream">IceCreame</NavLink></li>
     <li><NavLink className="nav-bar-link" to="/sweets">Sweets</NavLink></li>
+    <li><NavLink className="nav-bar-link" to="/productlist"><p id="count"><FaShoppingCart/><sup>0</sup></p></NavLink>  </li>
+
     </ul>
         </div>
 
@@ -244,6 +246,7 @@ function Allproduct(){
 
                 </div>
             </div>
+
 
            
 

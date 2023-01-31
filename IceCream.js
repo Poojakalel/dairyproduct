@@ -1,357 +1,77 @@
-import React, { useState } from "react";
-import {Link, NavLink} from 'react-router-dom'
-import images from './images/logo.jpg'
 import { FaShoppingCart } from "react-icons/fa";
-import Star from './Star';
-import images1 from './images/dairi.jpg'
-import images2 from './images/icecream.jpg'
-import images3 from './images/icecream1.jpg'
-import images4 from './images/icecream2.jpg'
-import images5 from './images/icecream4.jpg'
-import images6 from './images/vanila.jpg'
-import images7 from './images/icecream5.jpg'
-import images8 from './images/icecream6.jpg'
-import images9 from './images/icecream5.jpg'
-import images10 from './images/Service-Banner.jpg'
-import {FaFacebook} from 'react-icons/fa'
-import {FaInstagram} from 'react-icons/fa'
-import {FaYoutube} from 'react-icons/fa'
-import {FaTwitter} from 'react-icons/fa'
-// import CartAmountToggle from "./CartAmountToggle";
-import { FaMinusCircle,FaPlusCircle } from 'react-icons/fa';
+import images from './images/logo.jpg'
+import images9 from './images/product9.jpg'
+import { FaStar } from "react-icons/fa"
+import {Link, NavLink} from 'react-router-dom'
 
 
-function IceCream(){
+// import images11 from './images/icecream.jpg'
+// import images12 from './images/icecream1.jpg'
+// import images13 from './images/icecream2.jpg'
+// import images14 from './images/icecream4.jpg'
+// import images15 from './images/vanila.jpg'
+// import images16 from './images/icecream5.jpg'
+// import images17 from './images/icecream6.jpg'
+// import images18 from './images/icecream5.jpg'
 
-    
-    const {stars,
-     
-    reviews
-    }=IceCream;
+function Icecream({icecream,addToCart}){
+     return(
 
-    
-    
+          <div>
 
-    // const[amount,setAmount]=useState(1);
-    
-    const [num,setNum]=useState(0);
-
-    const incNum=()=>{
-        setNum(num+1);
-    }
-
-    const decNum=()=>{
-
-        if(num>0){
-            setNum(num-1);
-        }
-        else{
-        setNum(0);
-        }
-    }
-    
-    return(
-
-        
-        <div>
-            
-                        
-            <div className='nav'>
+<div className='nav'>
 
        
           
-         <div className='logo'>
-            <img src={images} alt="" height="80px" width="70px"/>
-            </div>
-            <ul className='navbar'>
-                
-             <li><NavLink className="nav-bar-link" to="/">Home</NavLink></li>
-    <li><NavLink className="nav-bar-link" to="/allproduct">Allproduct</NavLink></li>
-    <li><NavLink className="nav-bar-link" to="/icecream">IceCreame</NavLink></li>
-    <li><NavLink className="nav-bar-link" to="/sweets">Sweets</NavLink></li>
-    </ul>
-        </div>
+<div className='logo'>
+   <img src={images} alt="" height="80px" width="70px"/>
+   </div>
+   <ul className='navbar'>
+       
+    <li><NavLink className="nav-bar-link" to="/">Home</NavLink></li>
+<li><NavLink className="nav-bar-link" to="/allproduct">Allproduct</NavLink></li>
+<li><NavLink className="nav-bar-link" to="/icecream">IceCreame</NavLink></li>
+<li><NavLink className="nav-bar-link" to="/sweets">Sweets</NavLink></li>
+<li><NavLink className="nav-bar-link" to="/cartList"><p id="count"><FaShoppingCart/>CartList
+</p></NavLink>  </li>
 
-        <div className='main'>
-                <img src={images10} alt=""/>
-            </div>
+</ul>
+</div>
 
 
-            <div className='prod'>
 
-                <h1>IceCream Product</h1>
-             <p>Our ice creams are available in 62 stock keeping unit (“SKUs”) and is available in box, bars, cones and cups. Our ice creams are manufactured using only milk fat and cream.</p>
-            </div>
+          <div className="flex">
 
-            <div className='list'>
-                <div className='pro-container'>
-                    <div className='pro'>
-                        <img src={images2} alt=""/>
-                        <div className='desc'>
-                        <Link className='proname' to="/BlackCurrantIcecream">Black Currant Icecream
-</Link>
+               {
+     icecream.map((icecreamItem,icecreamIndex)=>{
 
-                        </div>
-                        <div className='block'>
-                            <div className='price'>
-                                Rs 10
-                            </div>
-                            <div className='star'>
+       return(
 
-                            <Star stars={stars} reviews={reviews}/>
-                             {/* <FaStar/>
-                             <FaStar/>
-                             <FaStar/>
-                             <FaStar/>
-                             <FaStar/> */}
-                            
+
+            
+      <div style={{width:'50%'}}>
+
+                   <div className="icecream-item">
+                    <img src={icecreamItem.url} width="100%"/>
+                    <p>{icecreamItem.name}|{icecreamItem.category}</p>
+                    <p>Rs {icecreamItem.price}</p>
+                    <button onClick={()=>addToCart(icecreamItem)}>Add To Cart</button>
                
-                            </div>
-
-                           
-                           
-                        </div>
-
-                        <div className="addto">
-
-                          
-
-                          <button className="but" onClick={incNum}><FaPlusCircle/></button>
-                          <button className="but">{num}</button>
-                          <button className="but" onClick={decNum}><FaMinusCircle/></button>
-                        </div>
-
-
-                        
-                       
-                        <div className='inpu'>
-                            <div className='add'>
-                                {/* <input type="text"  placeholder='select option' />
-                        <FaShoppingCart className='ca' /> */}
-                             
-                              </div>
-                        </div>
-
-                        <div className='butt'>
-                            <FaShoppingCart/>
-                            <NavLink to='/milk' className='button-select'>
-                                option select
-                            </NavLink>
-                            
-                        </div>
-                    </div>
-
-                    <div className='pro'>
-                        <img src={images3} alt=""/>
-                        <div className='desc'>
-                        <Link className='proname' to="/butter">Butter</Link>
-
-                        </div>
-                        <div className='block'>
-                            <div className='price'>
-                                Rs 10
-                            </div>
-                            <div className='star'>
-
-                            <Star stars={stars} reviews={reviews}/>
-                                {/* <FaStar/>
-                                <FaStar/>
-                                <FaStar/>
-                                <FaStar/>
-                                <FaStar/> */}
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className='pro'>
-                        <img src={images4} alt=""/>
-                        <div className='desc'>
-                        <Link className='proname' to="/curd">Curd</Link>
-
-                        </div>
-                        <div className='block'>
-                            <div className='price'>
-                                Rs 10
-                            </div>
-                            <div className='star'>
-                                
-                            <Star stars={stars} reviews={reviews}/>
-
-                               {/*                                  
-                                <FaStar/>
-                                <FaStar/>
-                                <FaStar/>
-                                <FaStar/>
-                                <FaStar/> */}
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className='pro'>
-                        <img src={images5} alt=""/>
-                        <div className='desc'>
-                        <Link className='proname' to="/icecream">IceCream</Link>
-
-                        </div>
-                        <div className='block'>
-                            <div className='price'>
-                                Rs 10
-                            </div>
-                            <div className='star'>
-
-                            <Star stars={stars} reviews={reviews}/>
-                                {/* <FaStar/>
-                                <FaStar/>
-                                <FaStar/>
-                                <FaStar/>
-                                <FaStar/> */}
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className='pro'>
-                        <img src={images6} alt=""/>
-                        <div className='desc'>
-                        <Link className='proname' to="/panner">Panner</Link>
-
-                        </div>
-                        <div className='block'>
-                            <div className='price'>
-                                Rs 10
-                            </div>
-                            <div className='star'>
-                            <Star stars={stars} reviews={reviews}/>
-                                {/* <FaStar/>
-                                <FaStar/>
-                                <FaStar/>
-                                <FaStar/>
-                                <FaStar/> */}
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className='pro'>
-                        <img src={images7} alt=""/>
-                        <div className='desc'>
-                        <Link className='proname' to="/ghee">Ghee</Link>
-
-                        </div>
-                        <div className='block'>
-                            <div className='price'>
-                                Rs 10
-                            </div>
-                            <div className='star'>
-                            <Star stars={stars} reviews={reviews}/>
-                                {/* <FaStar/>
-                                <FaStar/>
-                                <FaStar/>
-                                <FaStar/>
-                                <FaStar/> */}
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className='pro'>
-                        <img src={images8} alt=""/>
-                        <div className='desc'>
-                        <Link className='proname' to="/fmilk"> FlavouredMilk</Link>
-
-                        </div>
-                        <div className='block'>
-                            <div className='price'>
-                                Rs 10
-                            </div>
-                            <div className='star'>
-
-                            <Star stars={stars} reviews={reviews}/>
-                                {/* <FaStar/>
-                                <FaStar/>
-                                <FaStar/>
-                                <FaStar/>
-                                <FaStar/> */}
-                            </div>
-
-                            {/*add to cart*/}
-
-                           
-                        </div>
-                    </div>
-
-                    <div className='pro'>
-                        <img src={images9} alt=""/>
-                        <div className='desc'>
-                        <Link className='proname' to="/milk">Milk</Link>
-
-                        </div>
-                        <div className='block'>
-                            <div className='price'>
-                                Rs 10
-                            </div>
-                            <div className='star'>
-
-                            <Star stars={stars} reviews={reviews}/>
-                                {/* <FaStar/>
-                                <FaStar/>
-                                <FaStar/>
-                                <FaStar/>
-                                <FaStar/> */}
-                            </div>
-                        </div>
-                    </div>
-
+                </div>    
 
                 </div>
-            </div>
+          )
 
-           
-
-            <div className="footer">
-
-<div className="add">
-
-  <p><address>
-  Dodla Dairy Ltd<br/>
-  CIN: L15209TG1995PLC020324<br/>
-  8-2-293/82/A, 270/Q, Road No 10-C,<br/>
-  Jubilee Hills, Hyderabad – 500 033.<br/>
-  Telangana, India.<br/>
-  Tel: +91 40 4546 7777<br/>
-      </address></p>
-
-      </div>
-
-      <div className="lin">
-          <h4>About Us</h4>
-          <NavLink className="imp" to="/contactus">ContactUs</NavLink>
-          <NavLink className="imp" to="/ourparlour">Our Parlour</NavLink>
-          <NavLink className="imp" to="/events">Events</NavLink>
-          <NavLink className="imp" to="/awards">Awards</NavLink>
-      </div>
-
-      <div className="account">
-          <h4>My account</h4>
-          <NavLink className="imp" to="/myaccount">MyAccount</NavLink>
-          <NavLink className="imp" to="/termscondition">Terms Condition</NavLink>
-          <NavLink className="imp" to="/services">Services</NavLink>
-          <NavLink className="imp" to="/feedback">Feedback</NavLink>
-      </div>
-
-      <div className="icon">
-      <h4>Follow us</h4>
-       <FaFacebook/>
-       <FaInstagram/>
-       <FaTwitter/>
-       <FaYoutube/>
-      </div>
-
-</div>
-
-<div className="copyright">
-<p>2023@ Dairy milk Product List</p>
-</div>
-
-        </div>
-    )
+     })
 }
 
-export default IceCream;
+
+
+
+          </div>
+
+          </div>
+     )
+}
+
+export default Icecream;

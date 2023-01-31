@@ -5,6 +5,8 @@ import {FaFacebook} from 'react-icons/fa'
 import {FaInstagram} from 'react-icons/fa'
 import {FaYoutube} from 'react-icons/fa'
 import {FaTwitter} from 'react-icons/fa'
+import { FaShoppingCart } from "react-icons/fa";
+
 
 
 function NavBar(){
@@ -24,8 +26,12 @@ function NavBar(){
                 
              <li><NavLink className="nav-bar-link" to="/">Home</NavLink></li>
     <li><NavLink className="nav-bar-link" to="/allproduct">Allproduct</NavLink></li>
-    <li><NavLink className="nav-bar-link" to="/icecream">IceCreame</NavLink></li>
+    <li><NavLink className="nav-bar-link" to="/icecream">IceCream</NavLink></li>
     <li><NavLink className="nav-bar-link" to="/sweets">Sweets</NavLink></li>
+    <li><NavLink className="nav-bar-link" to="/cart">
+        <p id="count"><FaShoppingCart/>
+        <sup> 0</sup></p></NavLink>  </li>
+
     </ul>
         </div>
 

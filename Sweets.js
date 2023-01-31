@@ -20,7 +20,7 @@ import {FaInstagram} from 'react-icons/fa'
 import {FaYoutube} from 'react-icons/fa'
 import {FaTwitter} from 'react-icons/fa'
 
-function Sweets(){
+function Sweets({sweets,addToCart}){
 
     return(
         <div>
@@ -37,6 +37,8 @@ function Sweets(){
 <li><NavLink className="nav-bar-link" to="/allproduct">Allproduct</NavLink></li>
 <li><NavLink className="nav-bar-link" to="/icecream">IceCreame</NavLink></li>
 <li><NavLink className="nav-bar-link" to="/sweets">Sweets</NavLink></li>
+<li><NavLink className="nav-bar-link" to="/productlist"><p id="count"><FaShoppingCart/><sup>0</sup></p></NavLink>  </li>
+
 </ul>
 </div>
 
@@ -53,7 +55,7 @@ Home Products Sweets
 In addition to the above, we also manufacture milk based sweets such as doodhpeda, basundhi, gulab jamun, rasgulla, soan papdi and junnu. Our milk based sweets are sold in the states of Andhra Pradesh, Tamil Nadu and Telangana.</p>
    </div>
 
-   <div className='list'>
+   {/* <div className='list'>
        <div className='pro-container'>
            <div className='pro'>
                <img src={images2} alt=""/>
@@ -236,7 +238,37 @@ In addition to the above, we also manufacture milk based sweets such as doodhped
 
 
        </div>
-   </div>
+   </div> */}
+
+<div className="flex">
+
+{
+sweets && sweets.map((sweetItem,sweetIndex)=>{
+
+return(
+
+
+
+<div style={{width:'50%'}}>
+
+    <div className="sweet-item">
+     <img src={sweetItem.url} width="100%"/>
+     <p>{sweetItem.name}|{sweetItem.category}</p>
+     <p>Rs {sweetItem.price}</p>
+     <button onClick={()=>addToCart(sweetItem)}>Add To Cart</button>
+
+ </div>    
+
+ </div>
+)
+
+})
+}
+
+
+
+
+</div>
 
    <div className="footer">
 
